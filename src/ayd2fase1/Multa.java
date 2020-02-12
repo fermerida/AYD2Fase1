@@ -9,14 +9,14 @@ package ayd2fase1;
  *
  * @author Fer
  */
-public abstract class Multa {
-    String name;
+public class Multa {
+    String nombre;
     Boolean pagado; 
-    int cantidad;
+    int valor;
     
-    public Multa(String name, int cantidad){
-        this.name = name;
-        this.cantidad = cantidad;
+    public Multa(String nombre, int valor){
+        this.nombre = nombre;
+        this.valor = valor;
         this.pagado = false;
     }
     
@@ -25,11 +25,9 @@ public abstract class Multa {
         this.pagado = true;
     }
     
-
-    
-    abstract int calcular();
-    abstract void total_multa();
-    abstract String descripcion();
+    public int getValor(){
+        return this.valor;
+    }
     
     
 }

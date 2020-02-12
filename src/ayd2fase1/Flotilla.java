@@ -14,18 +14,18 @@ import java.util.LinkedList;
 public class Flotilla {
     SimpleFactory factory;
     String nombre;
-    LinkedList<Multa> lista_multas = new LinkedList<>();
+    LinkedList<Vehiculo> lista_multas = new LinkedList<>();
     
     public Flotilla(SimpleFactory factory, String nombre){
         this.factory = factory;
         this.nombre = nombre;
     }
-    public void crear_multa(String name){
-        Multa multa = factory.createMulta(name);
+    public void crear_vehiculo(String name,String placa, String driver){
+        Vehiculo vehiculo = factory.createVehiculo(name,placa, driver);
         //multa.accion;
-        agregar_multa(multa);
+        agregar_vehiculo(vehiculo);
     }
-    public void agregar_multa(Multa nueva_multa){
-        lista_multas.add(nueva_multa);
+    public void agregar_vehiculo(Vehiculo nuevo_vehiculo){
+        lista_multas.add(nuevo_vehiculo);
     }
 }
